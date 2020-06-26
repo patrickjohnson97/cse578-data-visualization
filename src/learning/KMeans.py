@@ -13,7 +13,6 @@ from sklearn.ensemble import RandomForestClassifier
 from sklearn import preprocessing
 from sklearn import metrics
 import seaborn as sns
-from sklearn.datasets import make_blobs
 from sklearn.cluster import KMeans
 
 data=np.genfromtxt('./data/adult.data', delimiter=', ', unpack=True, dtype="S")
