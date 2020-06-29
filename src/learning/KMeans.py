@@ -1,18 +1,6 @@
 #!/usr/bin/python3
-
-import sqlite3 as sq
-import pandas as pd
-import matplotlib.pyplot as plt
-from cycler import cycler
 import numpy as np
-from operator import itemgetter
-import numpy as np
-import statistics
-from sklearn.model_selection import train_test_split
-from sklearn.ensemble import RandomForestClassifier
 from sklearn import preprocessing
-from sklearn import metrics
-import seaborn as sns
 from sklearn.cluster import KMeans
 
 data=np.genfromtxt('./data/adult.data', delimiter=', ', unpack=True, dtype="S")

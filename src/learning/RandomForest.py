@@ -1,13 +1,7 @@
 #!/usr/bin/python3
-
-import sqlite3 as sq
 import pandas as pd
 import matplotlib.pyplot as plt
-from cycler import cycler
 import numpy as np
-from operator import itemgetter
-import numpy as np
-import statistics
 from sklearn.model_selection import train_test_split
 from sklearn.ensemble import RandomForestClassifier
 from sklearn import preprocessing
@@ -40,8 +34,6 @@ feature_names = ['age', 'workclass', 'fnlwgt', 'education', 'education-num', 'ma
 x=data_frame[feature_names]
 y=data_frame['income']
 
-
-
 X_train, X_test, y_train, y_test = train_test_split(x, y, test_size=0.3) # 70% training and 30% test
 
 #Create a Gaussian Classifier
@@ -56,7 +48,7 @@ feature_imp = pd.Series(clf.feature_importances_,index=feature_names).sort_value
 print(feature_imp)
 
 sns.barplot(x=feature_imp, y=feature_imp.index)
-# Add labels to your graph
+
 plt.xlabel('Feature Importance Score')
 plt.ylabel('Features')
 plt.title("Visualizing Important Features")
